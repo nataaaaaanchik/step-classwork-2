@@ -61,8 +61,32 @@ class Auto:
             return True
         else:
             print("Car cannot move")
-            return False
+            return
 
+
+class House:
+    def __init__(self):
+        self.food = 0
+        self.mess = 0
+
+
+class Job:
+    def __init__(self, job_list):
+        self.job = random.choice(list(job_list))
+        self.salary = job_list[self.job]['salary']
+        self.gladness = job_list[self.job]['gladness']
+
+
+job_list = {
+    'Java Developer':
+        {'salary': 50, 'gladness': 10, },
+    'Python Developer':
+        {'salary': 100, 'gladness': 10, },
+    'C++ Developer':
+        {'salary': 100, 'gladness': 5, },
+    'Rust Developer':
+        'salary': 50, 'gladness': 3, },
+}
 
 
 brands_of_cars = {
