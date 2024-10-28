@@ -1,3 +1,6 @@
+import random
+
+
 class Human:
     def __init__(self,name="Human", job=None):
         self.name = name
@@ -47,14 +50,25 @@ class Human:
 
 class Auto:
     def __init__(self, brand_list):
-        pass
+        self.brand = random.choice(list(brand_list))
+        self.fuel = brand_list[self.brand]["fuel"]
+        self.strenght = brand_list[self.brand]["strenght"]
+        self.consumption = brand_list[self.brand]["consumption"]
+
+    def drive(self):
+        if self.strenght > 0 and self.fuel >= self.consumption:
+            self.fuel -= self.consumption
+            return True
+        else:
+            print("Car cannot move")
+            return False
 
 
 
 brands_of_cars = {
     'BMW' : {'fuel': 100, 'strenght': 100, 'consuption': 6},
-    'PORSHE' : {'fuel': 120, 'strenght': 120, 'consuption': 8},
-    'AUDI' : {'fuel': 150, 'strenght': 150, 'consuption': 10},
+    'PORSHE' : {'fuel': 2000, 'strenght': 120, 'consuption': 20},
+    'AUDI' : {'fuel': 80, 'strenght': 120, 'consuption': 8},
 }
 
 first_car = Auto(brands_of_cars)
