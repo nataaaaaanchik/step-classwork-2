@@ -44,3 +44,17 @@ class Human:
 
         def live(self, day):
             pass
+
+class Auto:
+    def __init__(self, brand_list):
+        pass
+
+
+
+brands_of_cars = {
+    'BMW' : {'fuel': 100, 'strenght': 100, 'consuption': 6},
+    'PORSHE' : {'fuel': 120, 'strenght': 120, 'consuption': 8},
+    'AUDI' : {'fuel': 150, 'strenght': 150, 'consuption': 10},
+}
+
+first_car = Auto(brands_of_cars)
