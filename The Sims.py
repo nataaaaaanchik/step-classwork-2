@@ -43,10 +43,18 @@ class Human:
             pass
 
         def is_alive(self):
-            pass
+            if (self.gladness < 0):
+                print(f"{self.name} has depression...")
+                return False
+            if(self.satiety < 0):
+                print(f"{self.name} is dead...")
+                if (self.money < -500):
+                    print(f"{self.name} is bankrupt...")
+                return  False
+            return True
 
         def live(self, day):
-            pass
+            if
 
 class Auto:
     def __init__(self, brand_list):
